@@ -1,0 +1,618 @@
+<%- include ('partials/header.ejs') %>
+  <div>
+    <div class="innerboxt" style="overflow: hidden;">
+      <div class="inntoinn">
+        <h1 style="
+           text-align: center;
+           font-family: Lora;
+           font-weight: 900;
+           font-size: 2.6rem;
+           overflow: hidden;
+         ">
+          Tasks
+        </h1>
+        <hr>
+        <br>
+        <div class="row">
+          <% count=0 %>
+          <% task_dummy=[1,1,1]%>
+            <% if(task_dummy.length===0) {%>
+              <h2>Tasks will be announced soon :)</h2>
+
+              <% }else{%>
+                <% task_dummy.forEach(function(task){%>
+                  <div class="col-lg-6">
+                    <div class="card d-flex-row mx-0 my-3">
+                      <!-- <div class="card-body m-3">
+                        <h5 class="card-title"><strong>
+                            <h3 style="font-weight: 900;">
+                              <%= task.taskname%>
+                            </h3>
+                          </strong></h5>
+                        <p class="card-text" style="font-weight:400">
+                          <%= task.taskdescription%>
+                        </p>
+                      </div> -->
+                      <% switch (count){ case 0 : %>
+                        <div class="card-body m-3">
+                          <h5 class="card-title"><strong>
+                              <h3 style="font-weight: 900;">
+                                <!-- <%= task.taskname%> -->
+                                Task 1
+                              </h3>
+                            </strong></h5>
+                          <div class="card-text" style="font-weight:400">
+                            <!-- <%= task.taskdescription%> -->
+                            Here is the first task for all of you. You need to follow all of our Social Media Handles, i.e., Instagram, Facebook,
+                            YouTube, LinkedIn, and Twitter. You are required to take screenshots as proof. We will float a google form where you can
+                            submit those screenshots. We'll also ask you for your social media account usernames to verify.
+                            We will give scores on the basis of the proofs submitted. <br> By the end of the CA program, CAs having the Highest score
+                            will receive goods and merch from Elan & ηVision. <br> 
+                            <ul>
+                              The following are the official social media handles of Elan & ηVision.
+                              <li><a href="https://instagram.com/elan_nvision.iith?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+                              <li><a href="https://www.facebook.com/elannvision.iithyderabad/">Facebook</a></li>
+                              <li><a href="https://mobile.twitter.com/elan_nvision">Twitter</a></li>
+                              <li><a href="https://youtube.com/user/ElanIITHyderabad">Youtube</a></li>
+                              <li><a href="https://www.linkedin.com/company/elan-nvision-iith/">Linkedin</a></li>
+                            </ul>
+                            Following our account will be given points in such
+                            <br>
+                              Instagram and LinkedIn - 10
+                            points each <br>
+                              Facebook, twitter and YouTube - 5 points each
+                          </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <div class="d-flex">
+                            <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                              <%if (user.task0[0]){%><span class="btn btn-success" onmouseover="this.style.cursor='default'">Completed<%}else{%><span
+                                      class="btn btn-danger "onmouseover="this.style.cursor='default'">Not
+                                      Completed</span>
+                                    <%}%>
+                            </li>
+                          </div>
+                          <li class="btn btn-warning p-2"onmouseover="this.style.cursor='default'"><strong>Points : <%if (user.task0[1]){%>
+                                <%= user.task0[1]%>
+                                  <%}else{%>0
+                                    <%}%>/ 35</strong>
+                          </li>
+                        </ul>
+                        <% ;break; %>
+                          <% case 1 : %>
+                          <div class="card-body m-3">
+                            <h5 class="card-title"><strong>
+                                <h3 style="font-weight: 900;">
+                                  <!-- <%= task.taskname%> -->
+                                  Task 2
+                                </h3>
+                              </strong></h5>
+                            <p class="card-text" style="font-weight:400">
+                              <!-- <%= task.taskdescription%> -->
+                              Hello guys ! So here is the second task for you.
+                              We have our online Litfest going on. We have all sorts of different competitions. (We have attached the poster of list
+                              of events). <br>
+                              
+                              All the CAs need to share it in your social media handles with the registration and website link. You should bring
+                              registrations for the litfest by contacting your peers and friends from your college. <br>
+                              
+                              For sharing in social media handles, the following are the points: <br>
+                              Instagram, Facebook -10 points each. (Make sure you add the links)
+                              <br>
+                              Visit our website for more information: <a href="https://elan.org.in/Litfest.html">Elan Litfest</a>
+                              <br><br>
+                              <b>Registration Link: </b><a href="https://docs.google.com/forms/d/e/1FAIpQLSffRktv0EtbNZ8T-mFwMOBKxXzdKNikLrGWurfU0nqo99rg-g/viewform">https://docs.google.com/forms/d/e/1FAIpQLSffRktv0EtbNZ8T-mFwMOBKxXzdKNikLrGWurfU0nqo99rg-g/viewform</a>
+                              <br><br>
+
+                              For each registration you bring, 50 points will be awarded. <br>
+                              
+                              Similar to the first task, you have to submit the screenshots as proof and the same form will be contain a section where
+                              you need to fill in the details of the participants who registered in Litfest through you. <br>
+                              
+                              This task can change the leaderboard, so be enthusiastic to rise up the leaderboard.
+                              <br><br>
+                              <b>Deadline of this task : 27th December 2400HRS</b>
+                            </p>
+                          </div>
+                            <ul class="list-group list-group-flush">
+                              <div class="d-flex">
+                                <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                                  <%if (user.task1[0]){%><span class="btn btn-success"onmouseover="this.style.cursor='default'">Completed<%}else{%><span
+                                          class="btn btn-danger"onmouseover="this.style.cursor='default'">Not
+                                          Completed</span>
+                                        <%}%>
+                                </li>
+                              </div>
+                              <li class="btn btn-warning p-2"onmouseover="this.style.cursor='default'"><strong>Points : <%if (user.task1[1]){%>
+                                    <%= user.task1[1]%>
+                                      <%}else{%>0
+                                        <%}%> <%=task.taskpoints%></strong>
+                              </li>
+                            </ul>
+                            <% ;break; %>
+                              <% case 2 : %>
+                              <div class="card-body m-3">
+                                <h5 class="card-title"><strong>
+                                    <h3 style="font-weight: 900;">
+                                      <!-- <%= task.taskname%> -->
+                                      Task 3
+                                    </h3>
+                                  </strong></h5>
+                                <div class="card-text" style="font-weight:400">
+                                  <!-- <%= task.taskdescription%> -->
+
+                                  Here is your 3rd task.
+                                  Given below is the information about the upcoming workshops, you have to share it in your social media handles. <br> <br>
+                       Points will be given in such manner <br>
+                                    
+                                  Instagram story - 10 points <br>
+                                  Twitter - 5 points <br>
+                                  WhatsApp Status - 10 points <br>
+                                  Facebook - 5 points <br>
+                                  LinkedIn - 5 points
+                                  <br> <br>
+                                  In addition to it, the following link directs to the workshop post on our Instagram handle. Do like, share, comment and
+                                  save the post and upload all the necessary proofs(screenshots). A total of 15 points will be awarded for the same.
+                                  <br>
+                                  <br> Link: <a href="https://www.instagram.com/p/CmeQHkxS55i/?igshid=OGQ2MjdiOTE=">https://www.instagram.com/p/CmeQHkxS55i/?igshid=OGQ2MjdiOTE=</a>
+                                  <br> <br>
+                                  
+                                  <strong>Deadline of this task is 2nd January 11:59 PM</strong>
+                                </div>
+                              </div>
+                                <ul class="list-group list-group-flush">
+                                  <div class="d-flex">
+                                    <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                                      <%if (user.task2[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                                              class="btn btn-danger">Not
+                                              Completed</span>
+                                            <%}%>
+                                    </li>
+                                  </div>
+                                  <li class="btn btn-warning p-2"><strong>Points : <%if (user.task2[1]){%>
+                                        <%= user.task2[1]%>
+                                          <%}else{%>0
+                                            <%}%>/ 50</strong>
+                                  </li>
+                                </ul>
+                                <% ;break; %>
+                                  <% case 3 : %>
+                                    <ul class="list-group list-group-flush">
+                                      <div class="d-flex">
+                                        <li class="list-group-item m-3 d-flex align-center mx-auto"
+                                          style="border: none;">
+                                          <%if (user.task3[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                                                  class="btn btn-danger">Not
+                                                  Completed</span>
+                                                <%}%>
+                                        </li>
+                                      </div>
+                                      <li class="btn btn-warning p-2"><strong>Points : <%if (user.task3[1]){%>
+                                            <%= user.task3[1]%>
+                                              <%}else{%>0
+                                                <%}%>/ <%= task.taskpoints%></strong>
+                                      </li>
+                                    </ul>
+                                    <% ;break; %>
+                                      <% case 4 : %>
+                                        <ul class="list-group list-group-flush">
+                                          <div class="d-flex">
+                                            <li class="list-group-item m-3 d-flex align-center mx-auto"
+                                              style="border: none;">
+                                              <%if (user.task4[0]){%><span class="btn btn-success">Completed<%}else{%>
+                                                    <span class="btn btn-danger">Not
+                                                      Completed</span>
+                                                    <%}%>
+                                            </li>
+                                          </div>
+                                          <li class="btn btn-warning p-2"><strong>Points : <%if (user.task4[1]){%>
+                                                <%= user.task4[1]%>
+                                                  <%}else{%>0
+                                                    <%}%>/ <%= task.taskpoints%></strong>
+                                          </li>
+                                        </ul>
+                                        <% ;break; %>
+                                          <% case 5 : %>
+                                            <ul class="list-group list-group-flush">
+                                              <div class="d-flex">
+                                                <li class="list-group-item m-3 d-flex align-center mx-auto"
+                                                  style="border: none;">
+                                                  <%if (user.task5[0]){%><span class="btn btn-success">Completed
+                                                      <%}else{%>
+                                                        <span class="btn btn-danger">Not
+                                                          Completed</span>
+                                                        <%}%>
+                                                </li>
+                                              </div>
+                                              <li class="btn btn-warning p-2"><strong>Points : <%if (user.task5[1]){%>
+                                                    <%= user.task5[1]%>
+                                                      <%}else{%>0
+                                                        <%}%>/ <%= task.taskpoints%></strong>
+                                              </li>
+                                            </ul>
+                                            <% ;break; %>
+                                              <% case 6 : %>
+                                                <ul class="list-group list-group-flush">
+                                                  <div class="d-flex">
+                                                    <li class="list-group-item m-3 d-flex align-center mx-auto"
+                                                      style="border: none;">
+                                                      <%if (user.task6[0]){%><span class="btn btn-success">Completed
+                                                          <%}else{%><span class="btn btn-danger">Not
+                                                              Completed</span>
+                                                            <%}%>
+                                                    </li>
+                                                  </div>
+                                                  <li class="btn btn-warning p-2"><strong>Points : <%if
+                                                        (user.task6[1]){%>
+                                                        <%= user.task6[1]%>
+                                                          <%}else{%>0
+                                                            <%}%>/ <%= task.taskpoints%></strong>
+                                                  </li>
+                                                </ul>
+                                                <% ;break; %>
+                                                  <% case 7 : %>
+                                                    <ul class="list-group list-group-flush">
+                                                      <div class="d-flex">
+                                                        <li class="list-group-item m-3 d-flex align-center mx-auto"
+                                                          style="border: none;">
+                                                          <%if (user.task7[0]){%><span class="btn btn-success">Completed
+                                                              <%}else{%><span class="btn btn-danger">Not
+                                                                  Completed</span>
+                                                                <%}%>
+                                                        </li>
+                                                      </div>
+                                                      <li class="btn btn-warning p-2"><strong>Points : <%if
+                                                            (user.task7[1]){%>
+                                                            <%= user.task7[1]%>
+                                                              <%}else{%>0
+                                                                <%}%>/ <%= task.taskpoints%></strong>
+                                                      </li>
+                                                    </ul>
+                                                    <% ;break; %>
+                                                      <% case 8 : %>
+                                                        <ul class="list-group list-group-flush">
+                                                          <div class="d-flex">
+                                                            <li class="list-group-item m-3 d-flex align-center mx-auto"
+                                                              style="border: none;">
+                                                              <%if (user.task8[0]){%><span
+                                                                  class="btn btn-success">Completed
+                                                                  <%}else{%><span class="btn btn-danger">Not
+                                                                      Completed</span>
+                                                                    <%}%>
+                                                            </li>
+                                                          </div>
+                                                          <li class="btn btn-warning p-2"><strong>Points : <%if
+                                                                (user.task8[1]){%>
+                                                                <%= user.task8[1]%>
+                                                                  <%}else{%>0
+                                                                    <%}%>/ <%= task.taskpoints%></strong>
+                                                          </li>
+                                                        </ul>
+                                                        <% ;break; %>
+                                                          <% case 9 : %>
+                                                            <ul class="list-group list-group-flush">
+                                                              <div class="d-flex">
+                                                                <li
+                                                                  class="list-group-item m-3 d-flex align-center mx-auto"
+                                                                  style="border: none;">
+                                                                  <%if (user.task9[0]){%><span
+                                                                      class="btn btn-success">Completed<%}else{%><span
+                                                                          class="btn btn-danger">Not
+                                                                          Completed</span>
+                                                                        <%}%>
+                                                                </li>
+                                                              </div>
+                                                              <li class="btn btn-warning p-2"><strong>Points : <%if
+                                                                    (user.task9[1]){%>
+                                                                    <%= user.task9[1]%>
+                                                                      <%}else{%>0
+                                                                        <%}%>/ <%= task.taskpoints%></strong>
+                                                              </li>
+                                                            </ul>
+                                                            <% ;break; %>
+                                                              <%}%>
+
+
+                                                                <% count+=1;%>
+                    </div>
+                  </div>
+
+
+                  <%})%>
+                    <% } %>
+                      <!--       <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task0[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task0[1]){%>
+                      <%= user.task0[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task1[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task1[1]){%>
+                      <%= user.task1[1]%>
+                        <%}else{%> 0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task2[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task2[1]){%>
+                      <%= user.task2[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task3[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task3[1]){%>
+                      <%= user.task3[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task4[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task4[1]){%>
+                      <%= user.task4[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task5[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task5[1]){%>
+                      <%= user.task5[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task6[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task6[1]){%>
+                      <%= user.task6[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task7[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task7[1]){%>
+                      <%= user.task7[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task8[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task8[1]){%>
+                      <%= user.task8[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="card d-flex-row mx-0 my-3">
+              <div class="card-body m-3">
+                <h5 class="card-title"><strong>
+                    <h3 style="font-weight: 900;">Instagram</h3>
+                  </strong></h5>
+                <p class="card-text" style="font-weight:400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui ipsam eius ex doloremque ipsa dicta
+                  velit. Consdscujksdcdskdjcnsdkjcbiuv sdcjskducsuhdici sudichsdiucs scusidhcsidu
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <div class="d-flex">
+                  <li class="list-group-item m-3 d-flex align-center mx-auto" style="border: none;">
+                    <%if (user.task9[0]){%><span class="btn btn-success">Completed<%}else{%><span
+                            class="btn btn-danger">Not
+                            Completed</span>
+                          <%}%>
+                  </li>
+                </div>
+                <li class="btn btn-warning p-2"><strong>Points : <%if (user.task9[1]){%>
+                      <%= user.task9[1]%>
+                        <%}else{%>0
+                          <%}%></strong>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include ('partials/footer.ejs') %>
