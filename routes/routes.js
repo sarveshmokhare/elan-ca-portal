@@ -72,29 +72,29 @@ route.get("/profile/leaderboard", authCheck, (req, res) => {
   if (req.user.collegename) {
 
 
-    User.updateMany(
-      {},
-      [{ $set: { points: { $sum: [
-        { $arrayElemAt: ['$task0', 0] },
-        { $arrayElemAt: ['$task1', 0] },
-        { $arrayElemAt: ['$task2', 0] },
-        { $arrayElemAt: ['$task3', 0] },
-        { $arrayElemAt: ['$task4', 0] },
-        { $arrayElemAt: ['$task5', 0] },
-        { $arrayElemAt: ['$task6', 0] },
-        { $arrayElemAt: ['$task7', 0] },
-        { $arrayElemAt: ['$task8', 0] },
-        { $arrayElemAt: ['$task9', 0] },
+//     User.updateMany(
+//       {},
+//       [{ $set: { points: { $sum: [
+//         { $arrayElemAt: ['$task0', 0] },
+//         { $arrayElemAt: ['$task1', 0] },
+//         { $arrayElemAt: ['$task2', 0] },
+//         { $arrayElemAt: ['$task3', 0] },
+//         { $arrayElemAt: ['$task4', 0] },
+//         { $arrayElemAt: ['$task5', 0] },
+//         { $arrayElemAt: ['$task6', 0] },
+//         { $arrayElemAt: ['$task7', 0] },
+//         { $arrayElemAt: ['$task8', 0] },
+//         { $arrayElemAt: ['$task9', 0] },
 
-] } } }],
-      { new: true }
-    )
-      .then(updatedDocument => {
-        console.log("done");
-      })
-      .catch(error => {
-        console.error(error);
-      });
+// ] } } }],
+//       { new: true }
+//     )
+//       .then(updatedDocument => {
+//         console.log("done");
+//       })
+//       .catch(error => {
+//         console.error(error);
+//       });
 
     User.find({})
       .sort({ points: -1 })
